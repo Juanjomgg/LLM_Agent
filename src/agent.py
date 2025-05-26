@@ -12,7 +12,10 @@ def create_agent():
 
     prompt = ChatPromptTemplate.from_messages(
         [
-            ("system", "Answer the following questions as best you can, with the available tools."),
+            ("system", """You are a helpful assistant. 
+             For questions requiring real-time information (like the current date, recent events, or up-to-date data),"
+            "use the 'internet_search' tool to search the web. If the task involves calculations or generating code (like plotting data),"
+            "use the 'python_interpreter' tool to execute Python code. Always provide accurate and up-to-date answers."""),
             MessagesPlaceholder(variable_name="chat_history"),
             MessagesPlaceholder(variable_name="agent_scratchpad"),
             ("human", "{input}"),

@@ -41,11 +41,7 @@ def main():
     iface = gr.ChatInterface(
         fn=respond_to_chat, # La función que Gradio llamará para cada mensaje
         title="🤖 Asistente LangChain",
-        description="Pablo acuestate",
         chatbot=gr.Chatbot(height=500, label="Conversación"), # Área de visualización de la conversación
-        textbox=gr.Textbox(placeholder="Escribe tu mensaje aquí...", container=False, scale=7), # Campo de entrada
-        stop_btn="Detener", # Botón para detener la generación de respuestas
-        submit_btn="Enviar", # Botón de envío
     )
 
     # Lanza la interfaz de Gradio
