@@ -5,7 +5,7 @@ from langchain_core.tools import Tool
 # Herramienta de búsqueda en internet
 def get_internet_search_tool() -> Tool:
     
-    internet_search = TavilySearchResults(max_results=10)
+    internet_search = TavilySearchResults(max_results=20)
     internet_search.name = "internet_search"
     internet_search.description = "searchs the internet for recent information"
     return internet_search
