@@ -8,10 +8,7 @@ A Python project to build an agent using Cohere API and LangChain with a simple 
 4. Run the project: `python main.py`.
 
 ## Usage
-The agent processes the query:
-"Ask anything to the Agent"
-
-It will:
+Ask anything to the Agent, it will:
 - Search for the data online.
 
 ## Project Structure
